@@ -14,14 +14,14 @@ const Header = () => {
             <p className='text-md font-semibold'>Rental</p>
           </div>
         </div>
-        <div className='flex space-x-3 text-md font-semibold'>
+        <div className='hidden md:flex space-x-3 text-md font-semibold'>
           <Link className='hover:text-red-600 hover:underline' to={"/"}>Home</Link>
           <Link className='hover:text-red-600 hover:underline' to={"/about"}>About</Link>
           <Link className='hover:text-red-600 hover:underline' to={"/blogs"}>Blogs</Link>
           <Link className='hover:text-red-600 hover:underline' to={"/cars"}>Cars</Link>
           <Link className='hover:text-red-600 hover:underline' to={"/contact"}>Contact</Link>
         </div>
-        <div className='flex gap-4'>
+        <div className='gap-4 hidden md:flex'>
           <button className='bg-red-500 px-2 py-3 rounded text-white font-semibold hover:bg-red-600 shadow-lg shadow-red-200'>Login</button>
           <button className='bg-red-500 px-2 py-3 rounded text-white font-semibold hover:bg-red-600 shadow-lg shadow-red-200'>Register</button>
         </div>
@@ -34,8 +34,8 @@ const Header = () => {
           <FaEarthAfrica />
           <h1>Vadodara,Gujrat</h1>
         </div> */}
-        <div className='flex items-center gap-3'>
-          <FaRegClock />
+        <div className='flex items-center gap-1'>
+          <FaRegClock className='text-xl'/>
           <h1>Monday-Sunday</h1>
         </div>
       </div>
