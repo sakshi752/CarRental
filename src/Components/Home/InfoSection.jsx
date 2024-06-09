@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import banner from "../images/banner1.png"
 
 const InfoSection = () => {
   return (
     <div>
-      Info
+      <img src={banner} alt="" />
     </div>
   )
 }

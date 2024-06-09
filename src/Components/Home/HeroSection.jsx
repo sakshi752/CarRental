@@ -1,17 +1,29 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import heroImg from '../images/hero-banner.jpg';
+
 const HeroSection = () => {
   return (
-    <div className='flex justify-center items-center px-3 sm:px-5 md:px-10 lg:px-2 h-[85vh]'>
-      <div className='w-[45%] flex flex-col space-y-2'>
-        <h1 className='text-4xl font-bold text-red-600'>Plan your trip now!</h1>
-        <p className='text-lg'>Rent the car of your wish. Reasonable prices, unlimited miles, flexible pick-up options and much more</p>
-        <Link to={"/cars"} 
-        className='bg-red-500 px-2 py-3 rounded text-white font-semibold hover:bg-red-600 shadow-lg shadow-red-200 w-1/4 text-center'>View Cars</Link>
+    <div className='flex flex-col md:flex-row items-center space-y-7 md:space-y-0 mx-auto w-[90vw] py-10'>
+      <div className='flex flex-col space-y-2'>
+        <p className='text-lg text-blue-700 font-semibold'>Plan your trip now</p>
+        <h1 className='text-4xl md:text-5xl font-bold tracking-widest'>
+          Save <span className='text-blue-800'>big</span> with our car rental
+        </h1>
+        <p className='text-lg'>
+          Rent the car of your dreams. With reasonable prices, unlimited miles, flexible pick-up options, and much more.
+        </p>
+        <div className='flex space-x-3'>
+          <button className='bg-blue-900 hover:bg-blue-950 transition-all duration-200 text-white py-3 px-4 rounded font-semibold'>Book a ride</button>
+          <button className='bg-blue-900 hover:bg-blue-950 transition-all duration-200 text-white py-3 px-4 rounded font-semibold'>Learn more</button>
+        </div>
       </div>
-      <img className=" h-[19rem] lg:h-[27rem]  hidden sm:block" src="public/red-sports-car-png-1.png" alt="Red Sports Car" />
+      <div className='md:w-1/2 flex justify-center items-center'>
+        <div className='overflow-hidden rounded-lg shadow-lg'>
+          <img src={heroImg} alt="Hero" className='w-full h-auto transition-transform duration-300 transform hover:scale-110' />
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default HeroSection;

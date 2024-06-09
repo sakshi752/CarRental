@@ -1,48 +1,79 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaCarSide, FaEarthAfrica } from "react-icons/fa6";
-import { FaRegClock } from "react-icons/fa";
+import { FaCarSide } from "react-icons/fa";
+import { FiMenu, FiX } from 'react-icons/fi';
 
 const Header = () => {
+  // Responsive nav bar
+  const [navOpen, setNavOpen] = useState(false);
+  const toggleNav = () => {
+    setNavOpen(!navOpen);
+  };
+
+  // Change color when scrolling
+  const [color, setColor] = useState(false);
+  const changeColor = () => {
+    if (window.scrollY >= 10) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeColor);
+    return () => {
+      window.removeEventListener("scroll", changeColor);
+    };
+  }, []);
+
   return (
-    <div>
-      <div className='flex items-center justify-between py-3 px-2 sm:px-3 md:px-7 '>
+    
+    <nav className={`h-[70px] md:h-[80px] z-10 sticky top-0 drop-shadow-lg transition-all duration-300 ${color ? "bg-blue-950" : "bg-blue-50"}`}>
+      <div className='px-2 flex justify-between items-center w-full h-full'>
         <div className='flex items-center gap-3 cursor-pointer'>
-          <FaCarSide className='text-red-500 text-[3.2rem]' />
+          <FaCarSide className={`text-[3rem] ${color ? "text-white" : "text-blue-950"}`} />
           <div>
-            <h1 className='text-2xl font-bold'>Car</h1>
-            <p className='text-md font-semibold'>Rental</p>
+            <h1 className={`text-2xl font-semibold ${color ? "text-white" : "text-blue-950"}`}>Car</h1>
+            <p className={`text-md font-semibold ${color ? "text-white" : "text-blue-950"}`}>Rental</p>
           </div>
         </div>
         <div className='hidden md:flex space-x-3 text-md font-semibold'>
-          <Link className='hover:text-red-600 hover:underline' to={"/"}>Home</Link>
-          <Link className='hover:text-red-600 hover:underline' to={"/about"}>About</Link>
-          <Link className='hover:text-red-600 hover:underline' to={"/blogs"}>Blogs</Link>
-          <Link className='hover:text-red-600 hover:underline' to={"/cars"}>Cars</Link>
-          <Link className='hover:text-red-600 hover:underline' to={"/contact"}>Contact</Link>
+          <Link className={`hover:underline ${color ? "text-white" : "text-black"}`} to={"/"}>Home</Link>
+          <Link className={`hover:underline ${color ? "text-white" : "text-black"}`} to={"/about"}>About</Link>
+          <Link className={`hover:underline ${color ? "text-white" : "text-black"}`} to={"/blogs"}>Blogs</Link>
+          <Link className={`hover:underline ${color ? "text-white" : "text-black"}`} to={"/cars"}>Cars</Link>
+          <Link className={`hover:underline ${color ? "text-white" : "text-black"}`} to={"/contact"}>Contact</Link>
         </div>
         <div className='gap-4 hidden md:flex'>
-          <button className='bg-red-500 px-2 py-3 rounded text-white font-semibold hover:bg-red-600 shadow-lg shadow-red-200'>Login</button>
-          <button className='bg-red-500 px-2 py-3 rounded text-white font-semibold hover:bg-red-600 shadow-lg shadow-red-200'>Register</button>
+          <button className={`px-2 py-3 rounded font-semibold ${color ? "bg-white text-black" : "bg-blue-950 text-white"}`}>Login</button>
+          <button className={`px-2 py-3 rounded font-semibold ${color ? "bg-white text-black" : "bg-blue-950 text-white"}`}>Register</button>
+        </div>
+        <div className={`md:hidden ${color ? "text-white" : "text-black"}`} onClick={toggleNav}>
+          {navOpen ? <FiX size={30} /> : <FiMenu size={30} />}
         </div>
       </div>
-      <div className='flex items-center justify-between bg-red-500 text-white py-1 px-2 sm:px-3 md:px-7 '>
-        <div>
-          <h1>need help?9090909090</h1>
+      <div className={`w-[200px] min-h-screen px-8 absolute top-0 pt-4 bg-blue-950 md:hidden flex flex-col space-y-5 transition-transform duration-500 ease-in-out ${navOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+        <div className='flex items-center gap-3 cursor-pointer'>
+          <FaCarSide className='text-white text-[3.5rem]' />
+          <div>
+            <h1 className='text-2xl font-bold text-white'>Car</h1>
+            <p className='text-md font-semibold text-white'>Rental</p>
+          </div>
         </div>
-        {/* <div className='flex items-center'>
-          <FaEarthAfrica />
-          <h1>Vadodara,Gujrat</h1>
-        </div> */}
-        <div className='flex items-center gap-1'>
-          <FaRegClock className='text-xl'/>
-          <h1>Monday-Sunday</h1>
+        <Link className='hover:text-red-50 hover:underline text-white' to={"/"}>Home</Link>
+        <Link className='hover:text-red-50 hover:underline text-white' to={"/about"}>About</Link>
+        <Link className='hover:text-red-50 hover:underline text-white' to={"/blogs"}>Blogs</Link>
+        <Link className='hover:text-red-50 hover:underline text-white' to={"/cars"}>Cars</Link>
+        <Link className='hover:text-red-50 hover:underline text-white' to={"/contact"}>Contact</Link>
+
+        <div className='gap-4 flex flex-col'>
+          <button className='bg-white px-2 py-3 rounded text-black font-semibold'>Login</button>
+          <button className='bg-white px-2 py-3 rounded text-black font-semibold'>Register</button>
         </div>
       </div>
-    </div>
+    </nav>
+  );
+};
 
-
-  )
-}
-
-export default Header
+export default Header;

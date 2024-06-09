@@ -6,7 +6,7 @@ import Footer from "./Components/Footer"
 function App() {
   const renderThumb = ({ style, ...props }) => {
     const thumbStyle = {
-      backgroundColor: 'rgba(255, 0, 0, 0.3)', // Red color with 70% opacity
+      backgroundColor: 'rgba(255, 0, 0, 0.)', // Red color with 70% opacity
       borderRadius: '6px',
     };
     return <div style={{ ...style, ...thumbStyle }} {...props} />;
@@ -14,17 +14,16 @@ function App() {
 
   return (
     <>
-      <Scrollbars
+      {/* <Scrollbars
         style={{ height: '100vh', width: "100%" }}
-        renderThumbVertical={renderThumb}
-        renderThumbHorizontal={renderThumb}
-      >
-        <div className='bg-gray-100 min-h-screen tracking-widest'>
+       
+      > */}
+        <div className='bg-blue-50 min-h-screen tracking-widest'>
           <Header />
           <Outlet />
           {/* <Footer /> */}
         </div>
-      </Scrollbars>
+      {/* </Scrollbars> */}
     </>
   );
 }
