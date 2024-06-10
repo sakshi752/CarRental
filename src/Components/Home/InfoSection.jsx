@@ -3,8 +3,9 @@ import banner from "../images/banner1.png"
 
 const InfoSection = () => {
   return (
-    <div>
-      <img src={banner} alt="" />
+    <div className='mt-[3.4%]'>
+      dsad
+      {/* <img src={banner} alt="" /> */}
     </div>
   )
 }
