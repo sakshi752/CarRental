@@ -2,7 +2,7 @@ import React from 'react'
 
 const Testimonials = () => {
   return (
-    <div>
+    <div className='sm:mt-[10%] md:mt-[6.7%]'>
       Testimonials
     </div>
   )

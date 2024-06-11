@@ -1,74 +1,60 @@
 import React, { useState } from 'react';
 import carModel1 from "../images/banner1.png";
 import carModel2 from "../images/banner2.png";
+import carModel3 from "../images/banner3.png";
+import carModel4 from "../images/banner4.png";
+import carModel5 from "../images/banner5.png";
+import carModel6 from "../images/banner6.png";
 // import carModel3 from "../images/banner3.png";
 
 const carData = {
   "Audi A1 S-Line": {
     image: carModel1,
     price: "$35",
-    model: "A1 S-Line",
-    mark: "Audi",
-    year: "2018",
-    doors: "4/5",
+    carname: "Audi A1 S-Line",
     ac: "Yes",
-    transmission: "Automatic",
     fuel: "Petrol",
+    passenger: "4/5",
   },
   "VW Golf 6": {
     image: carModel2,
     price: "$30",
-    model: "Golf 6",
-    mark: "Volkswagen",
-    year: "2015",
-    doors: "4/5",
+    carname: "VW Golf 6",
     ac: "Yes",
-    transmission: "Manual",
     fuel: "Diesel",
+    passenger: "4/5",
   },
   "Toyota Camry": {
-    image: carModel1,
+    image: carModel3,
     price: "$40",
-    model: "Camry",
-    mark: "Toyota",
-    year: "2017",
-    doors: "4/5",
+    carname: "Toyota Camry",
     ac: "Yes",
-    transmission: "Automatic",
     fuel: "Petrol",
+    passenger: "4/5",
   },
-  "car4": {
-    image: carModel1,
+  "Car 4": {
+    image: carModel4,
     price: "$35",
-    model: "A1 S-Line",
-    mark: "Audi",
-    year: "2018",
-    doors: "4/5",
+    carname: "Car 4",
     ac: "Yes",
-    transmission: "Automatic",
     fuel: "Petrol",
+    passenger: "4/5",
   },
-  "car5": {
-    image: carModel2,
+  "Car 5": {
+    image: carModel5,
     price: "$30",
-    model: "Golf 6",
-    mark: "Volkswagen",
-    year: "2015",
-    doors: "4/5",
+    carname: "Car 5",
     ac: "Yes",
-    transmission: "Manual",
     fuel: "Diesel",
+    passenger: "4/5",
   },
-  "car6": {
-    image: carModel1,
+  "Car 6": {
+    image: carModel6,
     price: "$40",
-    model: "Camry",
-    mark: "Toyota",
-    year: "2017",
-    doors: "4/5",
+    carname: "Car 6",
     ac: "Yes",
-    transmission: "Automatic",
     fuel: "Petrol",
+    passenger: "4/5",
   },
 };
 
@@ -86,9 +72,9 @@ const CarModels = () => {
       <p className='text-xl font-semibold'>Vehicle Models</p>
       <h1 className='text-2xl font-bold text-blue-950'>Our rental fleet</h1>
       <p className='text-md text-center text-gray-600'>Choose from a variety of our amazing vehicles to rent for your next adventure or business trip</p>
-      <div className='w-full mt-[3%] flex justify-between flex-col md:flex-row gap-32'>
-        <div className='w-1/3'>
-          <ul className='flex flex-col gap-4 rounded'>
+      <div className='w-full mt-[3%] flex flex-col md:flex-row justify-between gap-2 md:gap-12'>
+        <div className='w-full md:w-1/4'>
+          <ul className='flex flex-col gap-4'>
             {Object.keys(carData).map((carModel) => (
               <li
                 key={carModel}
@@ -100,26 +86,23 @@ const CarModels = () => {
             ))}
           </ul>
         </div>
-        <div className='w-2/3'>
-          <img src={car.image} alt={selectedCar} className='object-contain w-full h-80' />
+        <div className='w-full md:w-1/2 flex justify-center'>
+          <img src={car.image} alt={selectedCar} className='object-contain w-[90%] md:w-[90%] h-80' />
         </div>
-        <div className='w-1/3'>
-          <div className='bg-blue-950 text-white py-3 px-2 rounded flex items-center justify-center gap-4'>
+        <div className='w-full md:w-1/4 flex flex-col items-center md:items-end gap-4'>
+          <div className='bg-blue-950 w-full text-white py-3 px-2 rounded flex items-center justify-center gap-4'>
             <p className='text-lg font-semibold'>{car.price}</p>
             <p className='text-md font-semibold'>rent per day</p>
           </div>
-          <div className=''>
-            <h1 className=''>Model: {car.model}</h1>
-            <ul className=''>
-              <li>Mark: {car.mark}</li>
-              <li>Year: {car.year}</li>
-              <li>Doors: {car.doors}</li>
-              <li>AC: {car.ac}</li>
-              <li>Transmission: {car.transmission}</li>
-              <li>Fuel: {car.fuel}</li>
+          <div className='w-full'>
+            <ul  className='flex flex-col'>
+              <li className='text-lg font-semibold  py-2'>Car Name: {car.carname}</li>
+              <li className='text-lg font-semibold  py-2'>AC: {car.ac}</li>
+              <li className='text-lg font-semibold  py-2'>Fuel: {car.fuel}</li>
+              <li className='text-lg font-semibold  py-2'>Passenger: {car.passenger}</li>
             </ul>
           </div>
-          <button className='bg-blue-950 text-white py-2 px-4 rounded-md'>Reserve Now</button>
+          <button className='bg-blue-950 w-full text-white py-2 px-4 rounded-md'>Reserve Now</button>
         </div>
       </div>
     </div>
