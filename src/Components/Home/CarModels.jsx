@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import carModel1 from "../images/banner1.png";
-import carModel2 from "../images/banner2.png";
-import carModel3 from "../images/banner3.png";
-import carModel4 from "../images/banner4.png";
-import carModel5 from "../images/banner5.png";
-import carModel6 from "../images/banner6.png";
+import carModel1 from "../images/carModels/banner1.png";
+import carModel2 from "../images/carModels/banner2.png";
+import carModel3 from "../images/carModels/banner3.png";
+import carModel4 from "../images/carModels/banner4.png";
+import carModel5 from "../images/carModels/banner5.png";
+import carModel6 from "../images/carModels/banner6.png";
 // import carModel3 from "../images/banner3.png";
 
 const carData = {
@@ -72,8 +72,9 @@ const CarModels = () => {
       <p className='text-xl font-semibold'>Vehicle Models</p>
       <h1 className='text-2xl font-bold text-blue-950'>Our rental fleet</h1>
       <p className='text-md text-center text-gray-600'>Choose from a variety of our amazing vehicles to rent for your next adventure or business trip</p>
-      <div className='w-full mt-[3%] flex flex-col md:flex-row justify-between gap-2 md:gap-12'>
-        <div className='w-full md:w-1/4'>
+
+      <div className='w-full mt-[3%] flex flex-col md:flex-row justify-between gap-0 md:gap-12 '>
+        <div className='w-full md:w-1/4 border-2 md:border-none'>
           <ul className='flex flex-col gap-4'>
             {Object.keys(carData).map((carModel) => (
               <li
@@ -89,13 +90,13 @@ const CarModels = () => {
         <div className='w-full md:w-1/2 flex justify-center'>
           <img src={car.image} alt={selectedCar} className='object-contain w-[90%] md:w-[90%] h-80' />
         </div>
-        <div className='w-full md:w-1/4 flex flex-col items-center md:items-end gap-4'>
+        <div className='w-full md:w-1/4 flex flex-col items-center justify-center md:items-end gap-4 border-2 md:border-none'>
           <div className='bg-blue-950 w-full text-white py-3 px-2 rounded flex items-center justify-center gap-4'>
             <p className='text-lg font-semibold'>{car.price}</p>
             <p className='text-md font-semibold'>rent per day</p>
           </div>
           <div className='w-full'>
-            <ul  className='flex flex-col'>
+            <ul className='flex flex-col'>
               <li className='text-lg font-semibold  py-2'>Car Name: {car.carname}</li>
               <li className='text-lg font-semibold  py-2'>AC: {car.ac}</li>
               <li className='text-lg font-semibold  py-2'>Fuel: {car.fuel}</li>

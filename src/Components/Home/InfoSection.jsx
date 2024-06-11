@@ -6,7 +6,7 @@ import { IoIosContacts } from "react-icons/io";
 const InfoSection = () => {
   return (
     <section className='w-full bg-gradient-to-b from-blue-800 to-blue-950 text-white mt-[16%] sm:mt-[10%] md:mt-[6.7%] py-6'>
-      <div className='w-[93%] lg:w-[85%] mx-auto flex flex-col items-center justify-center gap-1'>
+      <div className='w-[93%] lg:w-[90vw] mx-auto flex flex-col items-center justify-center gap-1'>
         <p className='text-xl font-semibold'>Plan your trip now</p>
         <h1 className='text-2xl font-bold'>Quick and easy car rental</h1>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-20 mt-[3%]'>
