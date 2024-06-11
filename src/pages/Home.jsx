@@ -5,6 +5,7 @@ import BookCarCard from '../Components/Home/BookCarCard';
 import CarModels from '../Components/Home/CarModels';
 import Testimonials from '../Components/Home/Testimonials';
 import InfoSection1 from '../Components/Home/InfoSection1';
+import Faq from '../Components/Home/Faq';
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <InfoSection/>
       <CarModels/>
       <InfoSection1/>
+      <Faq/>
       <Testimonials/>
     </>
   );

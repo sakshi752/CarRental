@@ -11,7 +11,7 @@ const InfoSection1 = () => {
             <div className='w-[80%] md:w-2/4 flex flex-col gap-2'>
                 <h1 className='text-2xl font-bold'>Do you want to join our team?</h1>
                 <p className='text-xl font-semibold'>Don't be late</p>
-                <button className='bg-white text-black px-3 py-2 mt-5 w-[40%] md:w-[60%] rounded font-semibold'>Become a Driver</button>
+                <button className='bg-white text-black px-3 py-2 mt-5 w-[100%] md:w-[70%] lg:w-[60%] rounded font-semibold'>Become a Driver</button>
             </div>
         </div>
     </section>
