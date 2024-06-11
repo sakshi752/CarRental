@@ -11,7 +11,7 @@ const BookCarCard = () => {
   const [pickDate, setPickDate] = useState("");
   const [dropDate, setDropDate] = useState("");
   return (
-    <div className='w-[93%] lg:w-[70%] mx-auto mt-[3.4%] flex flex-col space-y-3 bg-white drop-shadow-xl rounded-md px-5 py-6'>
+    <section id='bookCar' className='w-[93%] lg:w-[70%] mx-auto mt-[3.4%] flex flex-col space-y-3 bg-white drop-shadow-xl rounded-md px-5 py-6'>
       <h1 className='text-xl font-bold'>Book a car</h1>
       <form action="" className='grid grid-cols-2 md:grid-cols-3 gap-6'>
         <div className='flex flex-col space-y-1'>
@@ -123,7 +123,7 @@ const BookCarCard = () => {
           <button className='px-3 py-4 bg-blue-950 text-white rounded w-[100%] md:w-[50%]'>Book</button>
         </div>
       </form>
-    </div>
+    </section>
   )
 }
 
