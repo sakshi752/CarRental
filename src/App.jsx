@@ -8,7 +8,7 @@ function App() {
         <div className='bg-blue-50 min-h-screen tracking-widest'>
           <Header />
           <Outlet />
-          {/* <Footer /> */}
+          <Footer />
         </div>
 
     </>
