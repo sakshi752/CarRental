@@ -8,7 +8,7 @@ const Helmet = ({title}) => {
                 <img className='w-full h-full object-cover mix-blend-overlay' src={helmet} alt="Support" />
             </div>
             <div className='absolute top-0 left-0 w-full h-full flex items-center justify-center text-white'>
-                <h1 className='text-2xl font-bold'>{title}</h1>
+                <h1 className='text-2xl tracking-widest font-bold'>{title}</h1>
             </div>
         </div>
     )
