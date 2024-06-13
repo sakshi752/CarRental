@@ -8,6 +8,7 @@ import About from "./pages/About.jsx";
 import Cars from "./pages/Cars.jsx";
 import Blogs from "./pages/Blogs.jsx";
 import Contact from "./pages/Contact.jsx";
+import CarDetails from './pages/CarDetails.jsx';
 
 
 const routes=createBrowserRouter([
@@ -18,6 +19,7 @@ const routes=createBrowserRouter([
       {path:"/",element:<Home/>},
       {path:"/about",element:<About/>},
       {path:"/cars",element:<Cars/>},
+      {path:"/car-details/:id",element:<CarDetails/>},
       {path:"/blogs",element:<Blogs/>},
       {path:"/contact",element:<Contact/>}
     ]

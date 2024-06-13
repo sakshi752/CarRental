@@ -79,7 +79,7 @@ const CarModels = () => {
             {Object.keys(carData).map((carModel) => (
               <li
                 key={carModel}
-                className={`cursor-pointer ${selectedCar === carModel ? 'text-white bg-blue-950 rounded' : 'hover:text-white hover:bg-blue-950 rounded'} text-lg font-semibold px-4 py-2 transition-all duration-200`}
+                className={`cursor-pointer ${selectedCar === carModel ? 'text-white bg-blue-950 rounded': 'hover:text-white hover:bg-blue-950 rounded'} text-lg font-semibold px-4 py-2 transition-all duration-200`}
                 onClick={() => handleCarSelection(carModel)}
               >
                 {carModel}
