@@ -3,7 +3,7 @@ import heroImg from '../images/hero-banner.jpg';
 
 const HeroSection = () => {
   return (
-    <div className='flex flex-col md:flex-row items-center space-y-7 md:space-y-0 md:space-x-10 mx-auto  w-[90vw] py-10 '>
+    <section className='flex flex-col md:flex-row items-center space-y-7 md:space-y-0 md:space-x-10 mx-auto  w-[90vw] py-10 '>
       <div className='flex flex-col space-y-2 lg:w-[70%]'>
         <p className='text-lg text-blue-700 font-semibold'>Plan your trip now</p>
         <h1 className='text-4xl md:text-5xl font-bold tracking-widest'>
@@ -23,7 +23,7 @@ const HeroSection = () => {
         </div>
       </div>
     
-    </div>
+    </section>
   );
 };
 

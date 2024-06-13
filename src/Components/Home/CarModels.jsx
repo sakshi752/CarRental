@@ -68,7 +68,7 @@ const CarModels = () => {
   };
 
   return (
-    <div className='mt-[16%] sm:mt-[10%] md:mt-[6%] w-[93%] lg:w-[80%] mx-auto flex flex-col items-center gap-1'>
+    <section className='mt-[16%] sm:mt-[10%] md:mt-[6%] w-[93%] lg:w-[80%] mx-auto flex flex-col items-center gap-1'>
       <p className='text-xl font-semibold'>Vehicle Models</p>
       <h1 className='text-2xl font-bold text-blue-950'>Our rental fleet</h1>
       <p className='text-md text-center text-gray-600'>Choose from a variety of our amazing vehicles to rent for your next adventure or business trip</p>
@@ -106,7 +106,7 @@ const CarModels = () => {
           <button className='bg-blue-950 w-full text-white py-2 px-4 rounded-md'>Reserve Now</button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
