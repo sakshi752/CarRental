@@ -3,10 +3,10 @@ import car1 from '../Components/images/carModels/banner1.png';
 
 const CarDetails = () => {
   return (
-    <section className='w-[93%] lg:w-[80%] mx-auto flex flex-col items-center gap-20 mt-[-2%]'>
+    <section className='w-[93%] lg:w-[80%] mx-auto flex flex-col items-center gap-20 md:mt-[2%]'>
       {/* 1 */}
-      <div className='flex items-center gap-10'>
-        <div className='h-96'>
+      <div className='flex flex-col md:flex-row items-center gap-0 md:gap-10'>
+        <div className='md:h-96 flex items-center justify-center'>
           <img src={car1} alt="" className='w-full' />
         </div>
         <div className='w-[100%]'>
@@ -21,10 +21,10 @@ const CarDetails = () => {
         </div>
       </div>
 
-      <div className='flex justify-between w-full'>
+      <div className='flex justify-between gap-10 w-full'>
         <div className='w-2/3'>
-          <h1>Booking Details</h1>
-        <form action="">
+          <h1 className='text-lg text-blue-600'>Booking Details</h1>
+        <form action="" className='grid grid-cols-2 gap-4'>
           <input type="text" placeholder='First Name' />
           <input type="text" placeholder='Last Name' />
           <input type="email" placeholder='Mail Id' />
@@ -36,7 +36,7 @@ const CarDetails = () => {
         </form>
         </div>
         <div className='w-1/3'>
-          <h1>Payment Methods</h1>
+          <h1 className='text-lg text-blue-600' >Payment Methods</h1>
         </div>
       </div>
     </section>
