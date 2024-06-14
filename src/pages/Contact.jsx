@@ -6,7 +6,7 @@ const Contact = () => {
     <>
       <Helmet title={"Contact Us"} />
       <section className='w-[93%] lg:w-[80%] mx-auto flex items-center gap-20 md:mt-[5%]'>
-        <div className='flex flex-col md:flex-row justify-between gap-10 w-full'>
+        <div className='flex flex-col md:flex-row justify-between gap-10 w-full mt-5 md:mt-1'>
           {/* Contact Form */}
           <div className='w-full md:w-1/2'>
             <h1 className='text-xl font-semibold text-blue-600'>Get in Touch</h1>
@@ -41,7 +41,7 @@ const Contact = () => {
             </form>
           </div>
           {/* Contact Info */}
-          <div className='w-full md:w-1/2 p-6  rounded-lg '>
+          <div className='w-full md:w-1/2 md:p-6  rounded-lg '>
             <h1 className='text-xl text-blue-600 font-semibold mb-4'>Contact Info</h1>
             <p className='text-gray-700 mb-2'>
               <span className='font-semibold'>Address:</span> 123 xyz, Gujarat, India

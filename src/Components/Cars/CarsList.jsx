@@ -1,92 +1,86 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import car1 from '../images/carModels/banner1.png';
-import car2 from '../images/carModels/banner2.png';
-import car3 from '../images/carModels/banner3.png';
-import car4 from '../images/carModels/banner4.png';
-import car5 from '../images/carModels/banner5.png';
-import car6 from '../images/carModels/banner6.png';
-import car7 from '../images/carModels/banner7.png';
-import car8 from '../images/carModels/banner8.png';
 import { FaSortAmountUpAlt } from "react-icons/fa";
+import { Context } from '../../store/context';
 
-const carData = [
-    {
-        id: 1,
-        image: car1,
-        price: "$35",
-        carname: "Audi A1 S-Line",
-        ac: "Yes",
-        fuel: "Petrol",
-        passenger: "4",
-    },
-    {
-        id: 2,
-        image: car2,
-        price: "$30",
-        carname: "VW Golf 6",
-        ac: "Yes",
-        fuel: "Diesel",
-        passenger: "4",
-    },
-    {
-        id: 3,
-        image: car3,
-        price: "$40",
-        carname: "Toyota Camry",
-        ac: "Yes",
-        fuel: "Petrol",
-        passenger: "4",
-    },
-    {
-        id: 4,
-        image: car4,
-        price: "$35",
-        carname: "Swift",
-        ac: "Yes",
-        fuel: "Petrol",
-        passenger: "4",
-    },
-    {
-        id: 5,
-        image: car5,
-        price: "$30",
-        carname: "Jeep Avenger",
-        ac: "Yes",
-        fuel: "Diesel",
-        passenger: "5",
-    },
-    {
-        id: 6,
-        image: car6,
-        price: "$40",
-        carname: "Alto",
-        ac: "Yes",
-        fuel: "Petrol",
-        passenger: "4",
-    },
-    {
-        id: 7,
-        image: car7,
-        price: "$35",
-        carname: "Maruti Suzuki Dzire",
-        ac: "Yes",
-        fuel: "Petrol",
-        passenger: "4",
-    },
-    {
-        id: 8,
-        image: car8,
-        price: "$30",
-        carname: "Mercedes-Benz C-Class Coupe",
-        ac: "Yes",
-        fuel: "Diesel",
-        passenger: "4",
-    },
-];
+// const carData = [
+//     {
+//         id: 1,
+//         image: car1,
+//         price: "$35",
+//         carname: "Audi A1 S-Line",
+//         ac: "Yes",
+//         fuel: "Petrol",
+//         passenger: "4",
+//     },
+//     {
+//         id: 2,
+//         image: car2,
+//         price: "$30",
+//         carname: "VW Golf 6",
+//         ac: "Yes",
+//         fuel: "Diesel",
+//         passenger: "4",
+//     },
+//     {
+//         id: 3,
+//         image: car3,
+//         price: "$40",
+//         carname: "Toyota Camry",
+//         ac: "Yes",
+//         fuel: "Petrol",
+//         passenger: "4",
+//     },
+//     {
+//         id: 4,
+//         image: car4,
+//         price: "$35",
+//         carname: "Swift",
+//         ac: "Yes",
+//         fuel: "Petrol",
+//         passenger: "4",
+//     },
+//     {
+//         id: 5,
+//         image: car5,
+//         price: "$30",
+//         carname: "Jeep Avenger",
+//         ac: "Yes",
+//         fuel: "Diesel",
+//         passenger: "5",
+//     },
+//     {
+//         id: 6,
+//         image: car6,
+//         price: "$40",
+//         carname: "Alto",
+//         ac: "Yes",
+//         fuel: "Petrol",
+//         passenger: "4",
+//     },
+//     {
+//         id: 7,
+//         image: car7,
+//         price: "$35",
+//         carname: "Maruti Suzuki Dzire",
+//         ac: "Yes",
+//         fuel: "Petrol",
+//         passenger: "4",
+//     },
+//     {
+//         id: 8,
+//         image: car8,
+//         price: "$30",
+//         carname: "Mercedes-Benz C-Class Coupe",
+//         ac: "Yes",
+//         fuel: "Diesel",
+//         passenger: "4",
+//     },
+// ];
 
 
 const CarsList = () => {
+    const { carData}=useContext(Context);
     const [sortCriteria, setSortCriteria] = useState('');
 
     const handleSort = (e) => {
