@@ -32,26 +32,26 @@ const carData = {
     fuel: "Petrol",
     passenger: "4/5",
   },
-  "Car 4": {
+  "Swift": {
     image: carModel4,
     price: "$35",
-    carname: "Car 4",
+    carname: "Swift",
     ac: "Yes",
     fuel: "Petrol",
     passenger: "4/5",
   },
-  "Car 5": {
+  "Jeep Avenger": {
     image: carModel5,
     price: "$30",
-    carname: "Car 5",
+    carname: "Jeep Avenger",
     ac: "Yes",
     fuel: "Diesel",
     passenger: "4/5",
   },
-  "Car 6": {
+  "Maruti Suzuki Dzire": {
     image: carModel6,
     price: "$40",
-    carname: "Car 6",
+    carname: "Maruti Suzuki Dzire",
     ac: "Yes",
     fuel: "Petrol",
     passenger: "4/5",

@@ -15,7 +15,7 @@ const CarDetails = () => {
     if (data) {
       setCarDetails(data);
     }
-  }, [id, carData]);
+  }, []);
 
   const handlePaymentChange = (e) => {
     setSelectedPayMethod(e.target.value);
