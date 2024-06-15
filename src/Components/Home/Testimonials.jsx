@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import avatar1 from '../images/avatars/avatar1.jpg';
 import avatar2 from '../images/avatars/avatar2.jpg';
 import avatar3 from '../images/avatars/avatar3.jpg';
@@ -34,6 +34,7 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
+  const [current,setCurrent]=useState(1);
   return (
     <div className='mt-[16%] sm:mt-[10%] md:mt-[6%] w-[93%] lg:w-[70%] mx-auto flex flex-col items-center gap-6'>
       <h1 className='text-2xl font-bold text-blue-950 text-center mb-6'>Reviews</h1>
