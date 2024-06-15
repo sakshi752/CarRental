@@ -1,12 +1,13 @@
 import React from 'react'
-import Helmet from '../Components/Helmet'
+import Helmet from '../Components/Helmet';
+import BlogList from '../Components/Blogs/BlogList.jsx'
 
 const Blogs = () => {
   return (
-    <div>
+    <>
     <Helmet title={"Blogs"}/>
-    
-  </div>
+    <BlogList/>
+  </>
   )
 }
 

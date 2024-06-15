@@ -10,6 +10,7 @@ import Blogs from "./pages/Blogs.jsx";
 import Contact from "./pages/Contact.jsx";
 import CarDetails from './pages/CarDetails.jsx';
 import ContextProvider from './store/context.jsx';
+import BlogDetails from './pages/BlogDetails.jsx';
 
 
 const routes = createBrowserRouter([
@@ -22,6 +23,7 @@ const routes = createBrowserRouter([
       { path: "/cars", element: <Cars /> },
       { path: "/car-details/:id", element: <CarDetails /> },
       { path: "/blogs", element: <Blogs /> },
+      {path:"/blog-details/:id",element:<BlogDetails/>},
       { path: "/contact", element: <Contact /> }
     ]
   }
