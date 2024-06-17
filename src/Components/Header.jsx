@@ -1,25 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FaCarSide } from "react-icons/fa";
 import { FiMenu, FiX } from 'react-icons/fi';
+import { Context } from '../store/context';
 
 const Header = () => {
-  // Responsive nav bar
-  const [navOpen, setNavOpen] = useState(false);
-  const toggleNav = () => {
-    setNavOpen(!navOpen);
-  };
 
-  // Change color when scrolling
-  const [color, setColor] = useState(false);
-  const changeColor = () => {
-    if (window.scrollY >= 10) {
-      setColor(true);
-    } else {
-      setColor(false);
-    }
-  };
-
+  const { navOpen, toggleNav,
+    color, changeColor } = useContext(Context);
   useEffect(() => {
     window.addEventListener("scroll", changeColor);
     return () => {
@@ -28,7 +16,7 @@ const Header = () => {
   }, []);
 
   return (
-    
+
     <nav className={`h-[70px] md:h-[80px] z-10 sticky top-0 drop-shadow-lg transition-all duration-300 ${color ? "bg-blue-950" : "bg-blue-50"}`}>
       <div className='px-2 flex justify-between items-center w-full h-full'>
         <div className='flex items-center gap-3 cursor-pointer'>
